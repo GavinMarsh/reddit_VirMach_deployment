@@ -13,3 +13,24 @@
 To change the defoult bash python version use:
     
     alias python=python3
+
+create a virtualenv
+
+    mkvirtualenv pythonanywhere_venv
+ 
+ add modules
+    pip install pymongo
+    pip install flask_mongoengine
+    pip install Flask
+ 
+## text for pythonanywheres wsgi file
+    import sys
+
+    # add your project directory to the sys.path
+    project_home = u'/home/GMM/reddit_VirMach_deployment'
+    if project_home not in sys.path:
+        sys.path = [project_home] + sys.path
+
+    # import flask app but need to call it "application" for WSGI to work
+    from reddit import create_app
+    application = create_app('config.DevelopmentConfig')
