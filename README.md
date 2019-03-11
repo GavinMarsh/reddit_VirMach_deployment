@@ -8,3 +8,8 @@
 ## If using a remote Mongo cluster via MongoDB Atlas
     change config.py file to show Mongo Atlas cluster address
         mongodb+srv://admin:<password>@cluster0-zhceb.mongodb.net/test?retryWrites=true
+
+## When deploying via pythonanywhere
+To change the defoult bash python version use:
+    
+    alias python=python3
