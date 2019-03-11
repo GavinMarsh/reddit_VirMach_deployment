@@ -21,6 +21,7 @@ create a virtualenv
  add modules
     pip install pymongo
     pip install flask_mongoengine
+    pip install dnspython
  
 ## text for pythonanywheres wsgi file
     import sys
