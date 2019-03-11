@@ -57,7 +57,8 @@ def all_subreddits():
 
     return render_template(
         'all-subreddits.html',
-        subs=sorted(subs, key=str.lower) # sort list of subreddits
+        subs=sorted(subs, key=str) # sort list of subreddits
+        # changed key=str.lower to key=str
         )
 
 def by_subreddit(sub_to_pull=None):
