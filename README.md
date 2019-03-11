@@ -1,7 +1,8 @@
-## When installing app locally then activate using
-    python run.py
+## Mac local-machine deployment
+run application   
+   python run.py
 
-## When installing remotely on Ubuntu 16.04 server then use wsgi.file
+## VirMach remote Ubuntu 16.04 server using apache2 & wsgi.file
     change config.py file to show local MongoDB
         MONGODB_HOST = 'mongodb://localhost:27017/gm-sandbox'
 
@@ -42,7 +43,7 @@
 </VirtualHost>
 
 
-## When deploying via pythonanywhere
+## Pythonanywhere deployment
 To change the defoult bash python version use:
     
     alias python=python3
@@ -56,7 +57,7 @@ create a virtualenv
     pip install flask_mongoengine
     pip install dnspython
  
-## text for pythonanywheres wsgi file
+## Pythonanywheres wsgi file
     import sys
 
     # add your project directory to the sys.path
