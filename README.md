@@ -16,12 +16,11 @@ To change the defoult bash python version use:
 
 create a virtualenv
 
-    mkvirtualenv pythonanywhere_venv
+    virtualenv --python=python3.7 --no-site-packages pa_venv
  
  add modules
     pip install pymongo
     pip install flask_mongoengine
-    pip install Flask
  
 ## text for pythonanywheres wsgi file
     import sys
