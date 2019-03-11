@@ -14,5 +14,5 @@ if project_home not in sys.path:
 
 from reddit import create_app
 if __name__ == "__main__": #added
-application = create_app('config.DevelopmentConfig')
-app.run() # added
+    application = create_app('config.DevelopmentConfig')
+    app.run() # added
