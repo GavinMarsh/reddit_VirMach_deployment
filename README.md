@@ -2,7 +2,9 @@
 reddit is a flask web application wich has a model-view-controller layout:
 
 Model       = MongoDB
+
 View        = Jinja2
+
 Controller  = Flask/apache2/wsgi
 
 # local-mac apache2/wsgi-express/flask deployment
