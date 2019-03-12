@@ -1,8 +1,8 @@
-# Mac local-machine deployment
+# local-mac deployment
 run application  
    python run.py
 
-# VirMach remote Ubuntu 16.04, apache2 with WSGI deployment
+# VirMach Ubuntu 16.04, apache2 & WSGI deployment
 /etc/apache2/sites-available/sites.wsgi file
 Place each site on it's own port and include it's own WSGI daemon process, this will prevent any data leakage between each site.
     
