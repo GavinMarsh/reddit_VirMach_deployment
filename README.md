@@ -2,7 +2,7 @@
 run application  
    python run.py
 
-# VirMach Ubuntu 16.04, apache2 using WSGI deployment
+# VirMach Ubuntu 16.04, apache2/WSGI/Flask deployment
 /etc/apache2/sites-available/sites.wsgi file
 Place each site on it's own port and include it's own WSGI daemon process, this will prevent any data leakage between each site.
     
