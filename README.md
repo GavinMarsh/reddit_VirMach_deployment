@@ -9,23 +9,22 @@ Controller  = Flask/apache2/wsgi
 added a copy of config.py and has it's own wsgi.file called local-mac.wsgi, both files plased in the working directory reddit/reddit so that wsgi-express will work correctly.
 
 ### wsgi-express file
-   import sys
+       
+      import sys
 
-   # add your project directory to the sys.path
-   project_home = u'/var/www/reddit/'
-   if project_home not in sys.path:
+      # add your project directory to the sys.path
+      project_home = u'/var/www/reddit/'
+      if project_home not in sys.path:
       sys.path = [project_home] + sys.path
 
-
-   # You can't import a variable that is local to a function, so we need to call
-   # the function inside the application-factory to buid and return the app.
-   from __init__ import create_app
-   application = create_app('config.DevelopmentConfig')
-
-   application.secret_key = 'Add your secret key'
+     # You can't import a variable that is local to a function, so we need to call
+     # the function inside the application-factory to buid and return the app.
+     from __init__ import create_app
+     application = create_app('config.DevelopmentConfig')
+     application.secret_key = 'Add your secret key'
 
 To run application, navigate to the source files directory reddit/reddit and enter into the cli: 
-   mod_wsgi-express start-server local-mac.wsgi
+     mod_wsgi-express start-server local-mac.wsgi
 
 # VirMach Ubuntu 16.04, apache2/wsgi/flask deployment
 /etc/apache2/sites-available/sites.wsgi file
