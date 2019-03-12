@@ -1,8 +1,8 @@
-# local-mac deployment
+# local-mac apache2/wsgi-express/flask deployment
 run application  
    python run.py
 
-# VirMach Ubuntu 16.04, apache2/WSGI/Flask deployment
+# VirMach Ubuntu 16.04, apache2/wsgi/flask deployment
 /etc/apache2/sites-available/sites.wsgi file
 Place each site on it's own port and include it's own WSGI daemon process, this will prevent any data leakage between each site.
     
@@ -98,7 +98,7 @@ Place each site on it's own port and include it's own WSGI daemon process, this 
 </VirtualHost>
 
 
-# Pythonanywhere deployment
+# Pythonanywhere wsgi deployment
 To change the defoult bash python version use:
     
     alias python=python3
@@ -112,7 +112,7 @@ create a virtualenv
     pip install flask_mongoengine
     pip install dnspython
  
-### Pythonanywheres wsgi file
+### wsgi file
     import sys
 
     # add your project directory to the sys.path
