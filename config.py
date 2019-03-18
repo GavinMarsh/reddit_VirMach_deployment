@@ -19,7 +19,7 @@ class ProductionConfig(Config):
 # why is apache2 using this config ???
 class DevelopmentConfig(Config):
     #MONGODB_HOST = 'mongodb://localhost:27017/gm-sandbox'
-    MONGODB_HOST = 'mongodb+srv://admin:P=12345678@cluster0-zhceb.mongodb.net/gm_sandbox?retryWrites=true'
+    MONGODB_HOST = 'mongodb+srv://admin:P=12345678@cluster0-zhceb.mongodb.net/test?retryWrites=true'
     DEBUG = True
 
 class TestingConfig(Config):
