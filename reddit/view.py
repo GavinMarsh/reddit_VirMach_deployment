@@ -29,7 +29,7 @@ def posts_get_distinct_items(field):
 
 ### VIEWS
 def index():
-#    day_to_pull = get_last_rundate()
+    day_to_pull = get_last_rundate()
 
     return render_template(
         'index.html',
