@@ -8,14 +8,17 @@
 
 class Config(object):
     MONGODB_HOST = 'mongodb://localhost:27017/gm-sandbox'
+    #MONGODB_HOST = 'mongodb+srv://admin:P=12345678@cluster0-zhceb.mongodb.net/test?retryWrites=true'
     DEBUG = False
     TESTING = False
 
 class ProductionConfig(Config):
     MONGODB_HOST = 'mongodb://localhost:27017/gm-sandbox'
+    #MONGODB_HOST = 'mongodb+srv://admin:P=12345678@cluster0-zhceb.mongodb.net/test?retryWrites=true'
 
 class DevelopmentConfig(Config):
     MONGODB_HOST = 'mongodb://localhost:27017/gm-sandbox'
+    #MONGODB_HOST = 'mongodb+srv://admin:P=12345678@cluster0-zhceb.mongodb.net/test?retryWrites=true'
     DEBUG = True
 
 class TestingConfig(Config):
