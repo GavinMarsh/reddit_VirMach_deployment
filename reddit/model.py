@@ -1,7 +1,9 @@
 from flask_mongoengine import MongoEngine
 
-db = MongoEngine()
-
+#db = MongoEngine() commented out this and added the below three lines 20.03.19
+MONGODB_HOST = 'mongodb+srv://admin:P=12345678@cluster0-zhceb.mongodb.net/test?retryWrites=true'
+client = MongoClient(MONGODB_HOST)
+db = client.gm_sandbox
 
 class Post(db.Document):
     """Class for defining structure of reddit-top-posts collection
