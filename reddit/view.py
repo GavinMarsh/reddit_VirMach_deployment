@@ -12,6 +12,7 @@ def get_last_rundate():
         date_str field (format: 'YYYY-MM-DD')
     """
     # run a query to grab the last post
+    #for post in Post.objects().fields(date_str=1).order_by('-date_str').limit(1):
     for post in Post.objects().fields(date_str=1).order_by('-date_str').limit(1):
         return post.date_str
 
