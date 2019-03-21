@@ -125,6 +125,19 @@ Place each site on it's own port and include it's own WSGI daemon process, this 
                 CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 
+### cron job file
+       # ┌───────────── minute (0 - 59)
+       # │ ┌───────────── hour (0 - 23)
+       # │ │ ┌───────────── day of month (1 - 31)
+       # │ │ │ ┌───────────── month (1 - 12)
+       # │ │ │ │ ┌───────────── day of week (0 - 6) (Sunday to Saturday;
+       # │ │ │ │ │                                       7 is also Sunday on some systems)
+       # │ │ │ │ │
+       # │ │ │ │ │
+       # * * * * *  command_to_execute
+
+       # runs script at 6am every day 
+       0 6 * * * python /var/www/reddit/data_ingestion/ingestion.py
 
 # Pythonanywhere wsgi deployment
 To change the defoult bash python version use:
