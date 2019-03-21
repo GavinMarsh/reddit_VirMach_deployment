@@ -1,0 +1,9 @@
+# ./run_reddit_scraper
+
+#!/bin/bash
+
+# incase project files require us to be in the project folder to load settings
+cd /var/www/reddit/reddit_ingestion
+
+# run with project virtualenv
+"/var/www/reddit_ingestion/reddit/bin/python" ingestion.py
