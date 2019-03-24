@@ -5,6 +5,7 @@ import json
 from datetime import datetime
 import logging
 
+
 # setting model to local instance of MongoDB
 ##MONGO_HOST = 'mongodb://localhost:27017/gm_sandbox'
 
