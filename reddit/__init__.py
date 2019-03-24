@@ -8,7 +8,7 @@ def create_app(config):
     app.config.from_object(config)
 
     # initalize app with database
-    from model import db
+    from reddit.model import db
     db.init_app(app)
 
     # bind views

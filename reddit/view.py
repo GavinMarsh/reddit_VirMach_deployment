@@ -1,5 +1,5 @@
 from flask import render_template
-from model import Post
+from reddit.model import Post
 
 ### HELPER FUNCTIONS
 def get_last_rundate():
